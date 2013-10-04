@@ -2,7 +2,7 @@
 #define IPOST_H
 
 /*
-    Êı¾İ·¢ËÍ½Ó¿Ú
+    æ•°æ®å‘é€æ¥å£
     v1.0    @ 2013-10-01
 */
 
@@ -12,16 +12,16 @@ class IPost
 public:
     IPost()
     {
-        interval=10000; //Ä¬ÈÏ·¢ËÍ¼ä¸ôÎª10Ãë
+        interval = 10000;       //é»˜è®¤å‘é€é—´éš”ä¸º10ç§’
     }
 
-    virtual void appendValue(char* sensor, bool value)=0;
-    virtual void appendValue(char* sensor, int value)=0;
-    virtual void appendValue(char* sensor, unsigned int value)=0;
-    virtual void appendValue(char* sensor, long value)=0;
-    virtual void appendValue(char* sensor, unsigned long value)=0;
-    virtual void appendValue(char* sensor, double value)=0;
-    virtual void appendValue(char* sensor, char* value)=0;
+    virtual void appendValue (char &sensor, bool value) = 0;
+    virtual void appendValue (char &sensor, int value) = 0;
+    virtual void appendValue (char &sensor, unsigned int value) = 0;
+    virtual void appendValue (char &sensor, long value) = 0;
+    virtual void appendValue (char &sensor, unsigned long value) = 0;
+    virtual void appendValue (char &sensor, double value) = 0;
+    virtual void appendValue (char &sensor, char* value) = 0;
 
     virtual void sendValue();
 

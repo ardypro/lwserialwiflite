@@ -2,7 +2,7 @@
 #define LWGENERICCLIENT_H
 
 /*
-    ÀÖÎªÎïÁªÍø¿Í»§¶Ë»ùÀà
+    ä¹ä¸ºç‰©è”ç½‘å®¢æˆ·ç«¯åŸºç±»
 
     v1.0 @2013-10-01
 */
@@ -10,13 +10,19 @@
 #include "ipost.h"
 #include "Arduino.h"
 
+#define NOERROR         0
+#define SERVERBUSY      1
+#define UNKNOWNERROR    2
+
 class lwGenericClient : public IPost
 {
 public:
-    lwGenericClient(const char* userkey, const char* gateway):IPost()
+    lwGenericClient (const char* userkey, const char* gateway) : IPost()
     {
-        userKey=userkey;
-        gateWay=gateway;
+        userKey = userkey;
+        gateWay = gateway;
+        lasterr = NOERROR;
+
         lastTime = millis();
     }
 
@@ -27,13 +33,13 @@ public:
 
 
 
-    virtual  void appendValue(char* sensor, bool value);
-    virtual  void appendValue(char* sensor, int value);
-    virtual  void appendValue(char* sensor, unsigned int value);
-    virtual  void appendValue(char* sensor, long value);
-    virtual  void appendValue(char* sensor, unsigned long value);
-    virtual  void appendValue(char* sensor, double value);
-    virtual  void appendValue(char* sensor, char* value);
+    virtual  void appendValue (char &sensor, bool value);
+    virtual  void appendValue (char &sensor, int value);
+    virtual  void appendValue (char &sensor, unsigned int value);
+    virtual  void appendValue (char &sensor, long value);
+    virtual  void appendValue (char &sensor, unsigned long value);
+    virtual  void appendValue (char &sensor, double value);
+    virtual  void appendValue (char &sensor, char* value);
 
     virtual void sendValue();
 
@@ -41,8 +47,11 @@ public:
 //protected:
     const char* userKey;
     const char* gateWay;
-    virtual unsigned int getLastErr(); //È¡µÃ×î½üÖ´ĞĞ½á¹ûµÄ·şÎñÆ÷·µ»ØÖµ
+    virtual unsigned int getLastErr(); //å–å¾—æœ€è¿‘æ‰§è¡Œç»“æœçš„æœåŠ¡å™¨è¿”å›å€¼
+    unsigned int lasterr;
+
 private:
+
 };
 
 #endif // LWGENERICCLIENT_H
