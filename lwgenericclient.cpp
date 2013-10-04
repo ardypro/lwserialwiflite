@@ -1,37 +1,37 @@
 #include "lwgenericclient.h"
 
 
-void lwGenericClient::appendValue(char &sensor, bool value)
+void lwGenericClient::appendValue (const char* sensor, bool value)
 {
 
 };
 
-void lwGenericClient::appendValue(char &sensor, int value)
+void lwGenericClient::appendValue (const char* sensor, int value)
 {
 
 };
 
-void lwGenericClient::appendValue(char &sensor, unsigned int value)
+void lwGenericClient::appendValue (const char* sensor, unsigned int value)
 {
 
 };
 
-void lwGenericClient::appendValue(char &sensor, long value)
+void lwGenericClient::appendValue (const char* sensor, long value)
 {
 
 };
 
-void lwGenericClient::appendValue(char &sensor, unsigned long value)
+void lwGenericClient::appendValue (const char* sensor, unsigned long value)
 {
 
 };
 
-void lwGenericClient::appendValue(char &sensor, double value)
+void lwGenericClient::appendValue (const char* sensor, double value)
 {
 
 };
 
-void lwGenericClient::appendValue(char &sensor, char* value)
+void lwGenericClient::appendValue (const char* sensor, char* value)
 {
 
 };
@@ -39,7 +39,7 @@ void lwGenericClient::appendValue(char &sensor, char* value)
 
 void lwGenericClient::sendValue()
 {
-    lastTime=millis();
+    lastTime = millis();
 //post values to the server
 };
 

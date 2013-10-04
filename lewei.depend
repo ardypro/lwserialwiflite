@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1380725251 source:c:\users\ardypro\documents\lewei\lewei.ino
+1380909478 source:c:\users\ardypro\documents\lewei\lewei.ino
 	<Arduino.h>
 	"lwserialwifilite.h"
 
@@ -56,22 +56,41 @@
 1380554498 source:c:\users\ardypro\documents\lewei\ipost.cpp
 	"ipost.h"
 
-1380853462 c:\users\ardypro\documents\lewei\ipost.h
+1380909367 c:\users\ardypro\documents\lewei\ipost.h
 
 1380563558 c:\users\ardypro\documents\lewei\iget.h
 
 1380562318 c:\users\ardypro\documents\lewei\icontrollable.h
 
-1380618455 source:c:\users\ardypro\documents\lewei\lwgenericclient.cpp
+1380909488 source:c:\users\ardypro\documents\lewei\lwgenericclient.cpp
 	"lwgenericclient.h"
 
-1380733809 c:\users\ardypro\documents\lewei\lwgenericclient.h
+1380909645 c:\users\ardypro\documents\lewei\lwgenericclient.h
 	"ipost.h"
 	"Arduino.h"
 
-1380725517 source:c:\users\ardypro\documents\lewei\lwserialwifilite.cpp
+1380909367 source:c:\users\ardypro\documents\lewei\lwserialwifilite.cpp
 	"lwserialwifilite.h"
 
-1380733808 c:\users\ardypro\documents\lewei\lwserialwifilite.h
+1380909367 c:\users\ardypro\documents\lewei\lwserialwifilite.h
 	<lwgenericclient.h>
+
+1380909367 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lwgenericclient.cpp
+	"lwgenericclient.h"
+
+1380909645 c:\users\ardypro\documents\lewei\lwserialwiflite\lwgenericclient.h
+	"ipost.h"
+	"Arduino.h"
+
+1380909367 c:\users\ardypro\documents\lewei\lwserialwiflite\ipost.h
+
+1380909367 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lwserialwifilite.cpp
+	"lwserialwifilite.h"
+
+1380909367 c:\users\ardypro\documents\lewei\lwserialwiflite\lwserialwifilite.h
+	<lwgenericclient.h>
+
+1380909133 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lewei.ino
+	<Arduino.h>
+	"lwserialwifilite.h"
 

@@ -26,6 +26,23 @@ public:
         lastTime = millis();
     }
 
+    lwGenericClient() : IPost()
+    {
+        lasterr = NOERROR;
+
+        lastTime = millis();
+    }
+    
+    void setUserKey(const char* userkey)
+    {
+        userKey=userkey;
+    }
+    
+    void setGateWay(const char* gateway)
+    {
+        gateWay=gateway;
+    }
+
     virtual ~lwGenericClient()
     {
 
@@ -33,13 +50,13 @@ public:
 
 
 
-    virtual  void appendValue (char &sensor, bool value);
-    virtual  void appendValue (char &sensor, int value);
-    virtual  void appendValue (char &sensor, unsigned int value);
-    virtual  void appendValue (char &sensor, long value);
-    virtual  void appendValue (char &sensor, unsigned long value);
-    virtual  void appendValue (char &sensor, double value);
-    virtual  void appendValue (char &sensor, char* value);
+    virtual  void appendValue (const char* sensor, bool value);
+    virtual  void appendValue (const char* sensor, int value);
+    virtual  void appendValue (const char* sensor, unsigned int value);
+    virtual  void appendValue (const char* sensor, long value);
+    virtual  void appendValue (const char* sensor, unsigned long value);
+    virtual  void appendValue (const char* sensor, double value);
+    virtual  void appendValue (const char* sensor, char* value);
 
     virtual void sendValue();
 
