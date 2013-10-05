@@ -43,25 +43,17 @@ public:
         gateWay=gateway;
     }
 
-    virtual ~lwGenericClient()
-    {
-
-    };
-
-
-
-    virtual  void append (const char* sensor, bool value);
-    virtual  void append (const char* sensor, int value);
-    virtual  void append (const char* sensor, unsigned int value);
-    virtual  void append (const char* sensor, long value);
-    virtual  void append (const char* sensor, unsigned long value);
-    virtual  void append (const char* sensor, double value);
-    virtual  void append (const char* sensor, char* value);
+    virtual  void append (const char* sensor, bool value)=0;
+    virtual  void append (const char* sensor, int value)=0;
+    virtual  void append (const char* sensor, unsigned int value)=0;
+    virtual  void append (const char* sensor, long value)=0;
+    virtual  void append (const char* sensor, unsigned long value)=0;
+    virtual  void append (const char* sensor, double value)=0;
+    virtual  void append (const char* sensor, char* value)=0;
 
     virtual void upload();
 
-
-//protected:
+protected:
     const char* userKey;
     const char* gateWay;
     virtual unsigned int getLastErr(); //取得最近执行结果的服务器返回值

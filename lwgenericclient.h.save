@@ -50,15 +50,15 @@ public:
 
 
 
-    virtual  void append (const char* sensor, bool value);
-    virtual  void append (const char* sensor, int value);
-    virtual  void append (const char* sensor, unsigned int value);
-    virtual  void append (const char* sensor, long value);
-    virtual  void append (const char* sensor, unsigned long value);
-    virtual  void append (const char* sensor, double value);
-    virtual  void append (const char* sensor, char* value);
+    virtual  void append (const char* sensor, bool value)=0;
+    virtual  void append (const char* sensor, int value)=0;
+    virtual  void append (const char* sensor, unsigned int value)=0;
+    virtual  void append (const char* sensor, long value)=0;
+    virtual  void append (const char* sensor, unsigned long value)=0;
+    virtual  void append (const char* sensor, double value)=0;
+    virtual  void append (const char* sensor, char* value)=0;
 
-    virtual void upload();
+    virtual void upload()=0;
 
 
 //protected:
