@@ -1,10 +1,10 @@
 #include <Arduino.h>
 #include "lwserialwifilite.h"
 
-const char* Userkey="jack";
-const char* Gateway="01";
+const char* Userkey = "jack";
+const char* Gateway = "01";
 
-lwSerialWifiLite client(Userkey, Gateway);
+lwSerialWifiLite client (Userkey, Gateway);
 
 void setup()
 {
@@ -20,11 +20,11 @@ void setup()
 //    Serial.print("user key:\t");
 //    Serial.println(client.userKey);
 
-   const const char* sensor;
-    sensor="humidy";
-    sensor ="humidity";
+    const char* sensor;
+    sensor = "humidy";
+    sensor = "humidity";
 
-    client.appendValue(&sensor,10);
+    client.append (sensor, 10);
 
 }
 

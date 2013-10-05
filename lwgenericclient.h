@@ -10,7 +10,7 @@
 #include "ipost.h"
 #include "Arduino.h"
 
-#define NOERROR         0
+#define SUCCESS         0
 #define SERVERBUSY      1
 #define UNKNOWNERROR    2
 
@@ -21,14 +21,14 @@ public:
     {
         userKey = userkey;
         gateWay = gateway;
-        lasterr = NOERROR;
+        lasterr = SUCCESS;
 
         lastTime = millis();
     }
 
     lwGenericClient() : IPost()
     {
-        lasterr = NOERROR;
+        lasterr = SUCCESS;
 
         lastTime = millis();
     }
@@ -50,15 +50,15 @@ public:
 
 
 
-    virtual  void appendValue (const char* sensor, bool value);
-    virtual  void appendValue (const char* sensor, int value);
-    virtual  void appendValue (const char* sensor, unsigned int value);
-    virtual  void appendValue (const char* sensor, long value);
-    virtual  void appendValue (const char* sensor, unsigned long value);
-    virtual  void appendValue (const char* sensor, double value);
-    virtual  void appendValue (const char* sensor, char* value);
+    virtual  void append (const char* sensor, bool value);
+    virtual  void append (const char* sensor, int value);
+    virtual  void append (const char* sensor, unsigned int value);
+    virtual  void append (const char* sensor, long value);
+    virtual  void append (const char* sensor, unsigned long value);
+    virtual  void append (const char* sensor, double value);
+    virtual  void append (const char* sensor, char* value);
 
-    virtual void sendValue();
+    virtual void upload();
 
 
 //protected:

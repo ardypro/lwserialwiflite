@@ -15,15 +15,15 @@ public:
         interval = 10000;       //默认发送间隔为10秒
     }
 
-    virtual void appendValue (const char* sensor, bool value) = 0;
-    virtual void appendValue (const char* sensor, int value) = 0;
-    virtual void appendValue (const char* sensor, unsigned int value) = 0;
-    virtual void appendValue (const char* sensor, long value) = 0;
-    virtual void appendValue (const char* sensor, unsigned long value) = 0;
-    virtual void appendValue (const char* sensor, double value) = 0;
-    virtual void appendValue (const char* sensor, char* value) = 0;
+    virtual void append (const char* sensor, bool value) = 0;
+    virtual void append (const char* sensor, int value) = 0;
+    virtual void append (const char* sensor, unsigned int value) = 0;
+    virtual void append (const char* sensor, long value) = 0;
+    virtual void append (const char* sensor, unsigned long value) = 0;
+    virtual void append (const char* sensor, double value) = 0;
+    virtual void append (const char* sensor, char* value) = 0;
 
-    virtual void sendValue();
+    virtual void upload();
 
     unsigned int interval;
     unsigned long lastTime;

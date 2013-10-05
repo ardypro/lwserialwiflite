@@ -24,7 +24,7 @@ void setup()
     sensor = "humidy";
     sensor = "humidity";
 
-    client.appendValue (sensor, 10);
+    client.append (sensor, 10);
 
 }
 
