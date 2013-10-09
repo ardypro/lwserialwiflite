@@ -8,12 +8,12 @@ lwSerialWifiLite client (Userkey, Gateway);
 
 void setup()
 {
-//    Serial.begin(9600);
+    Serial.begin (9600);
 //    Serial.print("interval value:\t");
 //    Serial.println(client.interval);
 //
 //
-    client.lastTime=200;
+    client.lastTime = 200;
 //    Serial.print("lasttime\t");
 //    Serial.println(client.lastTime);
 //
@@ -24,6 +24,7 @@ void setup()
     sensor = "humidy";
     sensor = "humidity";
 
+    client.update();
     client.append (sensor, 10);
 
 }

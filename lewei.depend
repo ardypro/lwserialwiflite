@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1380947055 source:c:\users\ardypro\documents\lewei\lewei.ino
+1381292875 source:c:\users\ardypro\documents\lewei\lewei.ino
 	<Arduino.h>
 	"lwserialwifilite.h"
 
@@ -53,45 +53,23 @@
 1362986950 p:\portable app\codeblocks\arduino\hardware\arduino\variants\standard\pins_arduino.h
 	<avr/pgmspace.h>
 
-1380554498 source:c:\users\ardypro\documents\lewei\ipost.cpp
+1381342109 c:\users\ardypro\documents\lewei\lwserialwifilite.h
+	<lwgenericclient.h>
+
+1381342078 c:\users\ardypro\documents\lewei\lwgenericclient.h
 	"ipost.h"
+	"Arduino.h"
 
 1380947055 c:\users\ardypro\documents\lewei\ipost.h
-
-1380563558 c:\users\ardypro\documents\lewei\iget.h
-
-1380562318 c:\users\ardypro\documents\lewei\icontrollable.h
 
 1380985698 source:c:\users\ardypro\documents\lewei\lwgenericclient.cpp
 	"lwgenericclient.h"
 
-1380985990 c:\users\ardypro\documents\lewei\lwgenericclient.h
-	"ipost.h"
-	"Arduino.h"
-
-1380947055 source:c:\users\ardypro\documents\lewei\lwserialwifilite.cpp
+1381342137 source:c:\users\ardypro\documents\lewei\lwserialwifilite.cpp
 	"lwserialwifilite.h"
 	"HardwareSerial.h"
-
-1380947055 c:\users\ardypro\documents\lewei\lwserialwifilite.h
-	<lwgenericclient.h>
-
-1380909367 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lwgenericclient.cpp
-	"lwgenericclient.h"
-
-1380909645 c:\users\ardypro\documents\lewei\lwserialwiflite\lwgenericclient.h
-	"ipost.h"
-	"Arduino.h"
-
-1380909367 c:\users\ardypro\documents\lewei\lwserialwiflite\ipost.h
-
-1380909367 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lwserialwifilite.cpp
-	"lwserialwifilite.h"
-
-1380909367 c:\users\ardypro\documents\lewei\lwserialwiflite\lwserialwifilite.h
-	<lwgenericclient.h>
-
-1380909133 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lewei.ino
-	<Arduino.h>
-	"lwserialwifilite.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"iostream"
 

@@ -13,12 +13,6 @@ public:
 
     };
 
-    /** Default destructor */
-    virtual ~lwSerialWifiLite()
-    {
-
-    };
-
     virtual  unsigned int getLastErr();
     virtual  void update();
     virtual  void append (const char* sensor, bool value);
@@ -32,6 +26,7 @@ public:
     virtual void upload();
 
 protected:
+    virtual void uploadValue()
 private:
 };
 
