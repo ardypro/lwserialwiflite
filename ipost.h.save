@@ -23,10 +23,8 @@ public:
     virtual void append (const char* sensor, double value) = 0;
     virtual void append (const char* sensor, char* value) = 0;
 
-    virtual void upload();
+    virtual void upload()=0;
 
-    unsigned int interval;
-    unsigned long lastTime;
 
 };
 

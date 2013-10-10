@@ -12,7 +12,6 @@ class IPost
 public:
     IPost()
     {
-        interval = 10000;       //默认发送间隔为10秒
     }
 
     virtual void append (const char* sensor, bool value) = 0;
@@ -23,10 +22,8 @@ public:
     virtual void append (const char* sensor, double value) = 0;
     virtual void append (const char* sensor, char* value) = 0;
 
-    virtual void upload();
+    virtual void upload()=0;
 
-    unsigned int interval;
-    unsigned long lastTime;
 
 };
 

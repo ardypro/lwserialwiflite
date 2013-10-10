@@ -3,11 +3,8 @@
 void lwGenericClient::upload()
 {
     uploadValue(); //由各子类来实现，提交完数据之后，复位cmdJSON和lastTime.
-    cmdJSON="";
+    //cmdJSON="";
     lastTime = millis();
 };
 
-unsigned int lwGenericClient::getLastErr()
-{
 
-}

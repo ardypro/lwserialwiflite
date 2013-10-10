@@ -10,10 +10,6 @@
 #include "ipost.h"
 #include "Arduino.h"
 
-#define SUCCESS         0
-#define SERVERBUSY      1
-#define UNKNOWNERROR    2
-
 class lwGenericClient : public IPost
 {
 public:
@@ -21,16 +17,18 @@ public:
     {
         userKey = userkey;
         gateWay = gateway;
-        lasterr = SUCCESS;
-        cmdJSON="";
+        //cmdJSON = "";
         lastTime = millis();
     }
 
     lwGenericClient() : IPost()
     {
-        lasterr = SUCCESS;
-
         lastTime = millis();
+    }
+
+    virtual  ~lwGenericClient()
+    {
+
     }
 
     void setUserKey (const char* userkey)
@@ -54,12 +52,13 @@ public:
     virtual void upload();
 
 protected:
-    virtual void uploadValue()=0;
+    virtual void uploadValue() = 0;
     const char* userKey;
     const char* gateWay;
-    virtual unsigned int getLastErr(); //取得最近执行结果的服务器返回值
-    unsigned int lasterr;
     char* cmdJSON;
+
+    unsigned int interval;
+    unsigned long lastTime;
 private:
 
 };

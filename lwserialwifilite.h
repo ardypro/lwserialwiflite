@@ -13,7 +13,6 @@ public:
 
     };
 
-    virtual  unsigned int getLastErr();
     virtual  void update();
     virtual  void append (const char* sensor, bool value);
     virtual  void append (const char* sensor, int value);
