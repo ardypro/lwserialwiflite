@@ -1,29 +1,10 @@
 #include "lwserialwifilite.h"
 #include "HardwareSerial.h"
+#include "strutils.h"
+#include "stdio.h"
 
 #define leadingCMD "{\"method\": \"upload\","
 #define endingCMD "\"}]}&^!"
-
-
-char* charCat (char* one, char* two)
-{
-    /*
-        来源：http://stackoverflow.com/questions/2218290/concatenate-char-array-in-c
-
-        可能需要引用的库文件：
-            #include "stdio.h"
-            #include "stdlib.h"
-            #include "string.h"
-            #include "iostream"
-
-    */
-    int len = strlen (one) + strlen (two) + 1;
-    char* newStr = (char*) malloc (len);
-    strncpy (newStr, one, len);
-    strncat (newStr, two, len - strlen (newStr) );
-    return newStr;
-}
-
 
 
 
@@ -35,7 +16,6 @@ void lwSerialWifiLite::append (const char* sensor, bool value)
 
 void lwSerialWifiLite::append (const char* sensor, int value)
 {
-    int len;
 
 };
 
@@ -67,8 +47,19 @@ void lwSerialWifiLite::append (const char* sensor, char* value)
 
 void lwSerialWifiLite::upload()
 {
+//do nothing. Implement uploadValue, instead.
+
+//snprintf(str, sizeof(str), "%d", num);
 
 
+//char str[12];
+//int num = 3;
+//sprintf(str, "%d", num); // str now contains "3"
+
+    float x = 345.6134;
+    char buf[10];
+    sprintf(buf, "Test=%.2f", x);
+    Serial.println(buf);
 };
 
 void lwSerialWifiLite::update()

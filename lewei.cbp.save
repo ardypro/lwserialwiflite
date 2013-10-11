@@ -662,6 +662,7 @@
 		<Unit filename="lwgenericclient.h" />
 		<Unit filename="lwserialwifilite.cpp" />
 		<Unit filename="lwserialwifilite.h" />
+		<Unit filename="strutils.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

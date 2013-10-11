@@ -2,7 +2,7 @@
 #define LWSERIALWIFILITE_H
 
 #include <lwgenericclient.h>
-
+#include "Arduino.h"
 
 class lwSerialWifiLite : public lwGenericClient
 {
@@ -10,10 +10,11 @@ public:
     /** Default constructor */
     lwSerialWifiLite (const char* userkey, const char* gateway) : lwGenericClient (userkey, gateway)
     {
-
+        intervalUpdate = 50000;     //50s
+        lastUpdate = millis();
     };
 
-    virtual  void update();
+    virtual  void update();         //发心跳包
     virtual  void append (const char* sensor, bool value);
     virtual  void append (const char* sensor, int value);
     virtual  void append (const char* sensor, unsigned int value);
@@ -22,11 +23,14 @@ public:
     virtual  void append (const char* sensor, double value);
     virtual  void append (const char* sensor, char* value);
 
-    virtual void upload();
+    virtual void upload();          //上传数据
 
 protected:
-    virtual void uploadValue();
+    virtual void uploadValue();     //上传数据方法的执行部分
 private:
+    unsigned long lastUpdate;       //上次心跳包发送时间
+    unsigned int intervalUpdate;    //心跳包发送间隔
+
 };
 
 #endif // LWSERIALWIFILITE_H

@@ -17,18 +17,13 @@ public:
     {
         userKey = userkey;
         gateWay = gateway;
-        //cmdJSON = "";
+        cmdJSON = "";
         lastTime = millis();
     }
 
     lwGenericClient() : IPost()
     {
         lastTime = millis();
-    }
-
-    virtual  ~lwGenericClient()
-    {
-
     }
 
     void setUserKey (const char* userkey)

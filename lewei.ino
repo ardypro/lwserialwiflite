@@ -17,6 +17,10 @@ void setup()
 
     client.update();
     //client.append (sensor, 10);
+    const char* s="temperature";
+    int i=234;
+    Serial.println("setup");
+    client.upload();
 
 }
 

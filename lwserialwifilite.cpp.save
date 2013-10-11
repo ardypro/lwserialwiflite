@@ -1,37 +1,9 @@
 #include "lwserialwifilite.h"
 #include "HardwareSerial.h"
+#include "strutils.h"
 
 #define leadingCMD "{\"method\": \"upload\","
 #define endingCMD "\"}]}&^!"
-
-
-//#include "stdio.h"
-//#include "stdlib.h"
-//#include "string.h"
-//#include "iostream"
-
-//using namespace std;
-
-
-char* charCat (char* one, char* two)
-{
-    /*
-        来源：http://stackoverflow.com/questions/2218290/concatenate-char-array-in-c
-
-        可能需要引用的库文件：
-            #include "stdio.h"
-            #include "stdlib.h"
-            #include "string.h"
-            #include "iostream"
-
-    */
-    int len = strlen (one) + strlen (two) + 1;
-    char* newStr = (char*) malloc (len);
-    strncpy (newStr, one, len);
-    strncat (newStr, two, len - strlen (newStr) );
-    return newStr;
-}
-
 
 
 
@@ -44,6 +16,8 @@ void lwSerialWifiLite::append (const char* sensor, bool value)
 void lwSerialWifiLite::append (const char* sensor, int value)
 {
     int len;
+    char* c;
+    printf(c,)
 
 };
 
@@ -75,22 +49,16 @@ void lwSerialWifiLite::append (const char* sensor, char* value)
 
 void lwSerialWifiLite::upload()
 {
-
+//do nothing. Implement uploadValue, instead.
 
 };
-
-unsigned int lwSerialWifiLite::getLastErr()
-{
-
-
-}
 
 void lwSerialWifiLite::update()
 {
     // TODO (Ardypro#1#): 后面改为跟interval有关
     if (true)
     {
-        char* cmd="OLD VALUE";
+        char* cmd;
         int len = strlen (userKey) + strlen (gateWay) + 51;
         cmd = (char*) malloc (len);
         snprintf (cmd, len, "{\"method\":\"update\",\"gatewayNo\":\"%s\",\"userkey\":\"%s\"}&^!", gateWay, userKey);
@@ -99,4 +67,9 @@ void lwSerialWifiLite::update()
         char* newcmd;
 
     }
+}
+
+void lwSerialWifiLite::uploadValue()
+{
+
 }
