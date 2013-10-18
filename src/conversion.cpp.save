@@ -20,9 +20,9 @@ conversion::~conversion()
 
 void conversion::intToStr (int value, char* &str)
 {
-    str=(char*) realloc (str, sizeof(int)*8+1);
-    //sprintf (str, "%d", value); //for c++
-    itoa(value, str,10); //c style way
+    char buf[sizeof(int)*8+1];
+    //sprintf (buf, "%d", value); //for c++
+    itoa(value, buf,10); //c style way
 }
 
 char* conversion::charCat (char* one, char* two)
@@ -61,5 +61,3 @@ uint8_t conversion::appendChar(char* &dest, const char* str)
 
     return strlen(dest);
 }
-
-conversion converter;

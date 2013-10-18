@@ -3,6 +3,7 @@
 #include "strutils.h"
 #include "stdio.h"
 
+
 #define leadingCMD "{\"method\": \"upload\","
 #define endingCMD "\"}]}&^!"
 
@@ -16,6 +17,10 @@ void lwSerialWifiLite::append (const char* sensor, bool value)
 
 void lwSerialWifiLite::append (const char* sensor, int value)
 {
+    char* i;
+    converter.intToStr (value, i);
+    Serial.println (i);
+    free (i);
 
 };
 
@@ -58,8 +63,8 @@ void lwSerialWifiLite::upload()
 
     float x = 345.6134;
     char buf[10];
-    sprintf(buf, "Test=%.2f", x);
-    Serial.println(buf);
+    sprintf (buf, "Test=%.2f", x);
+    Serial.println (buf);
 };
 
 void lwSerialWifiLite::update()

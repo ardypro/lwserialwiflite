@@ -17,7 +17,7 @@ public:
     {
         userKey = userkey;
         gateWay = gateway;
-        cmdJSON = "";
+        clearCommand();
         lastTime = millis();
     }
 
@@ -52,6 +52,8 @@ protected:
     const char* gateWay;
     char* cmdJSON;
 
+    virtual void clearCommand();
+    virtual void appendCommand(const char* cmd);
     unsigned int interval;
     unsigned long lastTime;
 private:

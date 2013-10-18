@@ -3,6 +3,7 @@
 
 #include <lwgenericclient.h>
 #include "Arduino.h"
+#include "include/conversion.h"
 
 class lwSerialWifiLite : public lwGenericClient
 {

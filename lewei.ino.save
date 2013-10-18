@@ -1,5 +1,8 @@
 #include <Arduino.h>
 #include "lwserialwifilite.h"
+#include "include\conversion.h"
+#include "string.h"
+
 
 const char* Userkey = "jack";
 const char* Gateway = "01";
@@ -17,10 +20,33 @@ void setup()
 
     client.update();
     //client.append (sensor, 10);
-    const char* s="temperature";
-    int
-    client.append(s, 234);
+    const char* s = "temperature";
+    int i = 234;
+    Serial.println ("setup");
+    //client.upload();
 
+    
+    char* f;
+    Serial.print ("converter:");
+    //f=converter.floatToStr(208793.4526);
+    Serial.println (f);
+
+
+    char *str;
+
+    /* Initial memory allocation */
+    str = (char *) malloc (15);
+    strcpy (str, "tutorialspoint");
+    printf ("String = %s,  Address = %u\n", str, str);
+
+    Serial.println(str);
+    /* Reallocating memory */
+    str = (char *) realloc (str, 25);
+    strcat (str, ".com");
+    printf ("String = %s,  Address = %u\n", str, str);
+
+Serial.println(str);
+    free (str);
 }
 
 void loop()
