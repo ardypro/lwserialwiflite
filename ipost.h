@@ -6,6 +6,7 @@
     v1.0    @ 2013-10-01
 */
 
+#include "Arduino.h"
 
 class IPost
 {
@@ -19,7 +20,7 @@ public:
     virtual void append (const char* sensor, unsigned int value) = 0;
     virtual void append (const char* sensor, long value) = 0;
     virtual void append (const char* sensor, unsigned long value) = 0;
-    virtual void append (const char* sensor, double value) = 0;
+    virtual void append (const char* sensor, double value, uint8_t digits=2) = 0;
     virtual void append (const char* sensor, char* value) = 0;
 
     virtual void upload()=0;

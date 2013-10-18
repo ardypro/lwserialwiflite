@@ -55,6 +55,24 @@ uint8_t conversion::floatToStr (float value, uint8_t digits, char* &str)
 
 uint8_t conversion::appendChar(char* &dest, const char* str)
 {
+    /*
+        char *str;
+
+        // Initial memory allocation
+        str = (char *) malloc (15);
+        strcpy (str, "tutorialspoint");
+        printf ("String = %s,  Address = %u\n", str, str);
+
+        Serial.println (str);
+        // Reallocating memory
+        str = (char *) realloc (str, 25);
+        strcat (str, ".com");
+        printf ("String = %s,  Address = %u\n", str, str);
+
+        Serial.println (str);
+        free (str);
+    */
+
 
     dest  = (char *) realloc (dest , strlen (dest)+strlen (str)+1);
     strcat (dest, str);

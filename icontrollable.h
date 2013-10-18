@@ -8,6 +8,8 @@
     v1.0    @ 2013-10-01
 */
 
+#include "Arduino.h"
+
 struct controlFunctionNode
 {
     void (*controlFunctionAddr0)();

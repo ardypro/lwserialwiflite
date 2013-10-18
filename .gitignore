@@ -1,1 +1,13 @@
 /build
+*.save
+/*.save
+/*.save
+/*.save
+/*.save
+/*.save
+/*.save
+/*.save
+/*.save
+/*.save
+/include/conversion.h.save
+/src/conversion.cpp.save

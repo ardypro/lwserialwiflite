@@ -5,6 +5,7 @@
     从服务器获取数据接口
     v1.0    @ 2013-10-01
 */
+#include "Arduino.h"
 
 class IGet
 {

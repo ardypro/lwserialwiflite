@@ -9,50 +9,43 @@ const char* Gateway = "01";
 
 lwSerialWifiLite client (Userkey, Gateway);
 
-void setup()
-{
-    Serial.begin (9600);
-    //client.lastTime = 200;
 
+void testAppend()
+{
     const char* sensor;
     sensor = "humidy";
     sensor = "humidity";
 
     client.update();
 
-    client.append (sensor, (int)10);
+    Serial.println("");
+    Serial.println("begin append");
+    Serial.println("");
     const char* s = "temperature";
     int i = 234;
-    Serial.println("Append");
     client.append(s,i);
-    Serial.println ("setup");
+
+    Serial.println("");
+
+    double d=239.064;
+    client.append(s,d);
+
+    Serial.println("");
+    Serial.println ("end append");
     //client.upload();
 
+}
 
-//    char* f;
-//    Serial.print ("converter:");
-//    converter.floatToStr(208976.8763,3,f);
-//    Serial.println (f);
+void setup()
+{
+    Serial.begin (9600);
+    //client.lastTime = 200;
 
 
-//    char *str;
-//
-//    /* Initial memory allocation */
-//    str = (char *) malloc (15);
-//    strcpy (str, "tutorialspoint");
-//    printf ("String = %s,  Address = %u\n", str, str);
-//
-//    Serial.println (str);
-//    /* Reallocating memory */
-//    str = (char *) realloc (str, 25);
-//    strcat (str, ".com");
-//    printf ("String = %s,  Address = %u\n", str, str);
-//
-//    Serial.println (str);
-//    free (str);
+    testAppend();
 }
 
 void loop()
 {
-
+    //testAppend();
 }

@@ -28,13 +28,12 @@ void lwSerialWifiLite::append (const char* sensor, int value)
     char* i;
     converter.intToStr (value, i);
 
-    //{"Name":"SD","Value":"33"},
     CMD_Composite(cmdJSON,sensor,i);
+
+    Serial.println("append integer");
     Serial.println(cmdJSON);
 
-    //Serial.println (i);
     free (i);
-
 };
 
 void lwSerialWifiLite::append (const char* sensor, unsigned int value)
@@ -52,9 +51,15 @@ void lwSerialWifiLite::append (const char* sensor, unsigned long value)
 
 };
 
-void lwSerialWifiLite::append (const char* sensor, double value)
+void lwSerialWifiLite::append (const char* sensor, double value, uint8_t digits)
 {
+    char* f;
+    converter.floatToStr(value, digits,f);
+    CMD_Composite(cmdJSON,sensor,f);
+    Serial.println("append float");
+    Serial.println(cmdJSON);
 
+    free(f);
 };
 
 void lwSerialWifiLite::append (const char* sensor, char* value)
@@ -66,18 +71,6 @@ void lwSerialWifiLite::append (const char* sensor, char* value)
 void lwSerialWifiLite::upload()
 {
 //do nothing. Implement uploadValue, instead.
-
-//snprintf(str, sizeof(str), "%d", num);
-
-
-//char str[12];
-//int num = 3;
-//sprintf(str, "%d", num); // str now contains "3"
-
-//    float x = 345.6134;
-//    char buf[10];
-//    sprintf (buf, "Test=%.2f", x);
-//    Serial.println (buf);
 };
 
 void lwSerialWifiLite::update()

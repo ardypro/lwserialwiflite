@@ -21,7 +21,7 @@ public:
     virtual  void append (const char* sensor, unsigned int value);
     virtual  void append (const char* sensor, long value);
     virtual  void append (const char* sensor, unsigned long value);
-    virtual  void append (const char* sensor, double value);
+    virtual  void append (const char* sensor, double value, uint8_t digits=2);
     virtual  void append (const char* sensor, char* value);
 
     virtual void upload();          //上传数据
