@@ -23,31 +23,33 @@ void setup()
     client.append (sensor, (int)10);
     const char* s = "temperature";
     int i = 234;
+    Serial.println("Append");
+    client.append(s,i);
     Serial.println ("setup");
     //client.upload();
 
 
-    char* f;
-    Serial.print ("converter:");
-    converter.floatToStr(208976.8763,3,f);
-    Serial.println (f);
+//    char* f;
+//    Serial.print ("converter:");
+//    converter.floatToStr(208976.8763,3,f);
+//    Serial.println (f);
 
 
-    char *str;
-
-    /* Initial memory allocation */
-    str = (char *) malloc (15);
-    strcpy (str, "tutorialspoint");
-    printf ("String = %s,  Address = %u\n", str, str);
-
-    Serial.println (str);
-    /* Reallocating memory */
-    str = (char *) realloc (str, 25);
-    strcat (str, ".com");
-    printf ("String = %s,  Address = %u\n", str, str);
-
-    Serial.println (str);
-    free (str);
+//    char *str;
+//
+//    /* Initial memory allocation */
+//    str = (char *) malloc (15);
+//    strcpy (str, "tutorialspoint");
+//    printf ("String = %s,  Address = %u\n", str, str);
+//
+//    Serial.println (str);
+//    /* Reallocating memory */
+//    str = (char *) realloc (str, 25);
+//    strcat (str, ".com");
+//    printf ("String = %s,  Address = %u\n", str, str);
+//
+//    Serial.println (str);
+//    free (str);
 }
 
 void loop()

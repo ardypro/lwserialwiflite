@@ -17,6 +17,7 @@ public:
     {
         userKey = userkey;
         gateWay = gateway;
+        cmdJSON=(char*) malloc(9);
         clearCommand();
         lastTime = millis();
     }

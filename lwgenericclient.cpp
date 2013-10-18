@@ -1,4 +1,5 @@
 #include "lwgenericclient.h"
+#include "include/conversion.h"
 
 void lwGenericClient::upload()
 {
@@ -9,13 +10,11 @@ void lwGenericClient::upload()
 
 void lwGenericClient::clearCommand()
 {
-    cmdJSON = (char*) malloc (1);
+    cmdJSON = (char*) realloc (cmdJSON,1);
     strcpy (cmdJSON, "");
 }
 
 void lwGenericClient::appendCommand (const char* cmd)
 {
-    int n = strlen (cmd) + strlen (cmd);
-    cmdJSON = (char*) malloc (n);
-
+    converter.appendChar(cmdJSON, cmd);
 }
