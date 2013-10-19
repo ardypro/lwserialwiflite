@@ -73,7 +73,7 @@
 	"string.h"
 	"iostream"
 
-1382127966 source:e:\repo\git\ongithub\lwserialwiflite\lewei.ino
+1382150694 source:e:\repo\git\ongithub\lwserialwiflite\lewei.ino
 	<Arduino.h>
 	"lwserialwifilite.h"
 	"include\conversion.h"
@@ -419,7 +419,7 @@
 	<ardusim.h>
 	<avr/pgmspace.h>
 
-1382126132 e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.h
+1382150597 e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.h
 	<lwgenericclient.h>
 	"Arduino.h"
 	"include/conversion.h"
@@ -431,11 +431,11 @@
 1382126249 e:\repo\git\ongithub\lwserialwiflite\ipost.h
 	"Arduino.h"
 
-1382125304 source:e:\repo\git\ongithub\lwserialwiflite\lwgenericclient.cpp
+1382149896 source:e:\repo\git\ongithub\lwserialwiflite\lwgenericclient.cpp
 	"lwgenericclient.h"
 	"include/conversion.h"
 
-1382127910 source:e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.cpp
+1382150597 source:e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.cpp
 	"lwserialwifilite.h"
 	"HardwareSerial.h"
 	"strutils.h"

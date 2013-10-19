@@ -16,7 +16,7 @@ void testAppend()
     sensor = "humidy";
     sensor = "humidity";
 
-    client.update();
+    //client.update();
 
     Serial.println("");
     Serial.println("begin append");
@@ -32,7 +32,9 @@ void testAppend()
 
     Serial.println("");
     Serial.println ("end append");
-    //client.upload();
+    Serial.println("start uploading");
+
+    client.upload();
 
 }
 

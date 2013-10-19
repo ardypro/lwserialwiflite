@@ -34,6 +34,7 @@ void lwSerialWifiLite::append (const char* sensor, int value)
     Serial.println(cmdJSON);
 
     free (i);
+    i=NULL;
 };
 
 void lwSerialWifiLite::append (const char* sensor, unsigned int value)
@@ -60,6 +61,7 @@ void lwSerialWifiLite::append (const char* sensor, double value, uint8_t digits)
     Serial.println(cmdJSON);
 
     free(f);
+    f=NULL;
 };
 
 void lwSerialWifiLite::append (const char* sensor, char* value)
@@ -68,10 +70,11 @@ void lwSerialWifiLite::append (const char* sensor, char* value)
 };
 
 
-void lwSerialWifiLite::upload()
-{
-//do nothing. Implement uploadValue, instead.
-};
+//void lwSerialWifiLite::upload()
+//{
+////do nothing. Implement uploadValue, instead.
+////clearCommand();
+//};
 
 void lwSerialWifiLite::update()
 {
@@ -91,5 +94,6 @@ void lwSerialWifiLite::update()
 
 void lwSerialWifiLite::uploadValue()
 {
-
+    Serial.println("");
+    Serial.println("upload value in lwserialwifi");
 }
