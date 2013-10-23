@@ -651,9 +651,13 @@
 		<Compiler>
 			<Add directory="." />
 		</Compiler>
+		<Unit filename="datadef.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="icontrollable.h" />
 		<Unit filename="iget.h" />
 		<Unit filename="include/conversion.h" />
+		<Unit filename="include/debuglog.h" />
 		<Unit filename="ipost.h" />
 		<Unit filename="lewei.ino">
 			<Option compile="1" />

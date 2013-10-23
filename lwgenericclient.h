@@ -7,8 +7,17 @@
     v1.0 @2013-10-01
 */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "ipost.h"
+#include "debuglog.h"
+
+
+//#ifdef ARDUINO
 #include "Arduino.h"
+//#endif
+
+#define DEBUGGING
 
 class lwGenericClient : public IPost
 {
@@ -19,12 +28,12 @@ public:
         gateWay = gateway;
         cmdJSON=(char*) malloc(9);
         clearCommand();
-        lastTime = millis();
+        //lastTime = millis();
     }
 
     lwGenericClient() : IPost()
     {
-        lastTime = millis();
+        //lastTime = millis();
     }
 
     void setUserKey (const char* userkey)
@@ -42,8 +51,8 @@ public:
     virtual  void append (const char* sensor, unsigned int value) = 0;
     virtual  void append (const char* sensor, long value) = 0;
     virtual  void append (const char* sensor, unsigned long value) = 0;
-    virtual  void append (const char* sensor, double value, uint8_t digits=2) = 0;
-    virtual  void append (const char* sensor, char* value) = 0;
+    virtual  void append (const char* sensor, double value,unsigned int digits=2) = 0;
+    virtual  void append (const char* sensor, const char* value) = 0;
 
     virtual void upload();
 

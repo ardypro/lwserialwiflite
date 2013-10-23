@@ -73,10 +73,10 @@
 	"string.h"
 	"iostream"
 
-1382150694 source:e:\repo\git\ongithub\lwserialwiflite\lewei.ino
+1382488336 source:e:\repo\git\ongithub\lwserialwiflite\lewei.ino
 	<Arduino.h>
 	"lwserialwifilite.h"
-	"include\conversion.h"
+	"conversion.h"
 	"string.h"
 
 1361529168 p:\portable app\codeblocks\ardusim\arduino\cores\arduino.h
@@ -419,27 +419,33 @@
 	<ardusim.h>
 	<avr/pgmspace.h>
 
-1382150597 e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.h
-	<lwgenericclient.h>
-	"Arduino.h"
-	"include/conversion.h"
-
-1382126132 e:\repo\git\ongithub\lwserialwiflite\lwgenericclient.h
-	"ipost.h"
-	"Arduino.h"
-
-1382126249 e:\repo\git\ongithub\lwserialwiflite\ipost.h
-	"Arduino.h"
-
-1382149896 source:e:\repo\git\ongithub\lwserialwiflite\lwgenericclient.cpp
+1382460900 e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.h
+	"HardwareSerial.h"
 	"lwgenericclient.h"
-	"include/conversion.h"
+	"Arduino.h"
+	"conversion.h"
 
-1382150597 source:e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.cpp
+1382460884 e:\repo\git\ongithub\lwserialwiflite\lwgenericclient.h
+	<stdio.h>
+	<stdlib.h>
+	"ipost.h"
+	"debuglog.h"
+	"Arduino.h"
+
+1382459666 e:\repo\git\ongithub\lwserialwiflite\ipost.h
+	"Arduino.h"
+
+1382460892 source:e:\repo\git\ongithub\lwserialwiflite\lwgenericclient.cpp
+	"lwgenericclient.h"
+	"conversion.h"
+	<string.h>
+	<stdio.h>
+
+1382488873 source:e:\repo\git\ongithub\lwserialwiflite\lwserialwifilite.cpp
 	"lwserialwifilite.h"
 	"HardwareSerial.h"
-	"strutils.h"
 	"stdio.h"
+	<string.h>
 
 1381387300 e:\repo\git\ongithub\lwserialwiflite\strutils.h
 	"stdio.h"
@@ -497,19 +503,20 @@
 1362986950 p:\portable app\arduinoide\cb4arduino\arduino\hardware\arduino\variants\standard\pins_arduino.h
 	<avr/pgmspace.h>
 
-1382127581 source:e:\repo\git\ongithub\lwserialwiflite\src\conversion.cpp
-	"include/conversion.h"
+1382454786 source:e:\repo\git\ongithub\lwserialwiflite\src\conversion.cpp
+	"conversion.h"
 	"stdio.h"
 	"stdlib.h"
 	"string.h"
+	"include/debuglog.h"
 	"HardwareSerial.h"
+	"iostream"
 	"stdio.h"
 	"stdlib.h"
 	"string.h"
 	"iostream"
 
-1382121117 e:\repo\git\ongithub\lwserialwiflite\include\conversion.h
-	"Arduino.h"
+1382459987 e:\repo\git\ongithub\lwserialwiflite\include\conversion.h
 
 1371033101 p:\portable app\arduinoide\codeblocks\arduino\hardware\arduino\cores\arduino\arduino.h
 	<stdlib.h>
@@ -560,4 +567,29 @@
 
 1362986950 p:\portable app\arduinoide\codeblocks\arduino\hardware\arduino\variants\standard\pins_arduino.h
 	<avr/pgmspace.h>
+
+1382414274 e:\repo\git\ongithub\lwserialwiflite\include\debuglog.h
+	<stdio.h>
+
+1382159083 e:\repo\git\ongithub\lwserialwiflite\datadef.c
+
+1382159083 source:e:\repo\git\ongithub\lwserialwiflite\datadef.c
+
+1382488873 source:e:\repo\git\ongithub\lwserialwiflite\conversion.cpp
+	"conversion.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"debuglog.h"
+	"HardwareSerial.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"iostream"
+
+1382459987 e:\repo\git\ongithub\lwserialwiflite\conversion.h
+
+1382488351 e:\repo\git\ongithub\lwserialwiflite\debuglog.h
+	<stdio.h>
+	"HardwareSerial.h"
 
