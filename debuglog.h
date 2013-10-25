@@ -1,10 +1,9 @@
 #ifndef DEBUGLOG_H
 #define DEBUGLOG_H
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "HardwareSerial.h"
 
-//#pragma once
 
 class debuglog
 {

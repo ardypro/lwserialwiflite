@@ -1,85 +1,64 @@
-#include <Arduino.h>
+//#include <Arduino.h>
 #include "lwserialwifilite.h"
 #include "conversion.h"
-#include "string.h"
+//#include "string.h"
 
 
-const char* Userkey = "jack";
+const char* Userkey = "029b3884b91e4d00b514158ba1e2ac57";
 const char* Gateway = "01";
+int t = 0;
+long l=0L;
+double d=0.00f;
 
 lwSerialWifiLite client(Userkey, Gateway);
 
-void testAppend1()
+void DELEAY()
 {
-    char* L;
-    unsigned int l=78556;
-    converter.uintToStr(l,L);
-    DEBUG.println(L);
+    delay(20000);
+}
 
+void testAppend()
+{
+    lwSerialWifiLite client(Userkey, Gateway);
+    client.update();
 
-    const char* key="029b3884b91e4d00b514158ba1e2ac57";
-    const char* gate="01";
-
-    lwSerialWifiLite client(key, gate);
+    delay(15000);
 
     char* fc;
     fc=(char*) malloc(1);
 
     const char* sensor="WD";
-    int t=-302;
     const char* h="SD";
-    float f=-2359.9002;
+    const char* ydl="YDL";
 
+    client.append(h,d);
     client.append(sensor,t);
-    client.append(h,f);
-    client.append(h,l);
+    client.append(ydl,l);
+
     client.upload();
 
-
-    client.update();
+    t++;
+    d+=0.1;
+    l+=10;
 
     converter.FreeAndNil(fc);
-}
-
-void testAppend()
-{
-    const char* sensor;
-    sensor = "humidy";
-    sensor = "humidity";
-
-    //client.update();
-
-    Serial.println("");
-    Serial.println("begin append");
-    Serial.println("");
-    const char* s = "temperature";
-    int i = 234;
-    client.append(s,i);
-
-    Serial.println("");
-
-    double d=239.064;
-    client.append(s,d);
-
-    Serial.println("");
-    Serial.println("end append");
-    Serial.println("start uploading");
-
-    client.upload();
 
 }
+
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(38400);
     //client.lastTime = 200;
 
 
-    testAppend1();
+    testAppend();
+    DELEAY();
 }
 
 void loop()
 {
-    testAppend1();
-    delay(60000);
+    testAppend();
+    DELEAY();
+
 }

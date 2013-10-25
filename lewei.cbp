@@ -651,13 +651,11 @@
 		<Compiler>
 			<Add directory="." />
 		</Compiler>
-		<Unit filename="datadef.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="conversion.cpp" />
+		<Unit filename="conversion.h" />
+		<Unit filename="debuglog.h" />
 		<Unit filename="icontrollable.h" />
 		<Unit filename="iget.h" />
-		<Unit filename="include/conversion.h" />
-		<Unit filename="include/debuglog.h" />
 		<Unit filename="ipost.h" />
 		<Unit filename="lewei.ino">
 			<Option compile="1" />
@@ -667,7 +665,6 @@
 		<Unit filename="lwgenericclient.h" />
 		<Unit filename="lwserialwifilite.cpp" />
 		<Unit filename="lwserialwifilite.h" />
-		<Unit filename="src/conversion.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

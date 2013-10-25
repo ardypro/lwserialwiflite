@@ -3,21 +3,44 @@
 
 /*
     乐为物联网客户端基类
+    ====================
 
-    v1.0 @2013-10-01
+    这是整个library的基类，其它lib都是在此基类上面通过实现不同的接口而形成。
+
+    由于所有的服务都需要发送数据到服务器,所以基类也实现了IPost接口。
+
+
+
+    使用方法：
+
+    创建实例之后，第一步设置好UserKey和GateWay；
+    上传数据时，先调用append()方法追加数据，然后统一通过upload()来上传到服务器。
+
+    根据协议，每60秒需要至少调用一次update()方法发送心跳包，保持与服务器的连接。
+
+
+
+    子类化注意事项
+    ==============
+
+    创建此基类的子类的时候，需要注意upload（）方法并没有真正实现上传数据的功能，
+    具体实现的代码在子类的uploadValue()方法中。
+
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+/*
+    版本历史
+    ========
+
+    v1.0 @2013-10-01    创建项目
+
+*/
+
+
 #include "ipost.h"
 #include "debuglog.h"
-
-
-//#ifdef ARDUINO
 #include "Arduino.h"
-//#endif
 
-#define DEBUGGING
 
 class lwGenericClient : public IPost
 {
@@ -28,12 +51,12 @@ public:
         gateWay = gateway;
         cmdJSON=(char*) malloc(9);
         clearCommand();
-        //lastTime = millis();
+        lastTime = millis();
     }
 
     lwGenericClient() : IPost()
     {
-        //lastTime = millis();
+        lastTime = millis();
     }
 
     void setUserKey (const char* userkey)

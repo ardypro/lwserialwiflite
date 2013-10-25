@@ -91,13 +91,13 @@ void lwSerialWifiLite::update()
 
 void lwSerialWifiLite::uploadValue()
 {
-    DEBUG.print((char*)"Uploading...\n\t\n");
+    //DEBUG.print((char*)"Uploading...\n\t\n");
     int len;
     len=strlen(cmdJSON);
     cmdJSON[len-1]='\0';
 
     converter.appendChar(cmdJSON, endingCMD);
-    DEBUG.println(cmdJSON);
+    DEBUG.print(cmdJSON);
 }
 
 void lwSerialWifiLite::clearCommand()

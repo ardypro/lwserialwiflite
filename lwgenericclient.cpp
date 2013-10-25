@@ -1,8 +1,7 @@
 #include "lwgenericclient.h"
 #include "conversion.h"
-#include <string.h>
-
-#include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
 
 
 void lwGenericClient::upload()

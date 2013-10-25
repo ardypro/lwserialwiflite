@@ -2,10 +2,33 @@
 #define LWSERIALWIFILITE_H
 
 #include "HardwareSerial.h"
-
 #include "lwgenericclient.h"
-#include "Arduino.h"
 #include "conversion.h"
+
+
+/*
+    乐为TCP长连接的协议
+    ===================
+
+    连接tcp.lewei50.com 或者IP：42.121.128.216   端口号：9960
+
+    update: //连接心跳包
+        {"method": "update","gatewayNo": "01","userkey": "029b3884b91e4d00b514158ba1e2ac57"}&^!
+    upload: //上传数据
+        {"method": "upload","data":[{"Name":"SD","Value":"33"},{"Name":"WD","Value":"96.2"}]}&^!
+
+
+    因为串口wifi模块能够直接将从UART收到的数据转发给指定的域名和端口，因此只需要前期设置好wifi模块，
+    Arduino就可以使用Serial将上述格式的数据包通过wifi模块发到乐为服务器。
+
+*/
+
+/*
+    版本历史
+
+    201310231140    1.0可用版
+*/
+
 
 class lwSerialWifiLite : public lwGenericClient
 {
