@@ -663,8 +663,8 @@
 		</Unit>
 		<Unit filename="lwgenericclient.cpp" />
 		<Unit filename="lwgenericclient.h" />
-		<Unit filename="lwserialwifilite.cpp" />
-		<Unit filename="lwserialwifilite.h" />
+		<Unit filename="lwtcpclientlite.cpp" />
+		<Unit filename="lwtcpclientlite.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

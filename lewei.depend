@@ -581,3 +581,37 @@
 1382499549 e:\repo\git\ongithub\lwserialwiflite\debuglog.h
 	"HardwareSerial.h"
 
+1382857683 source:c:\users\ardypro\documents\lewei\lwserialwiflite\conversion.cpp
+	"conversion.h"
+	"debuglog.h"
+	"HardwareSerial.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"iostream"
+
+1382857683 c:\users\ardypro\documents\lewei\lwserialwiflite\conversion.h
+
+1382857683 c:\users\ardypro\documents\lewei\lwserialwiflite\debuglog.h
+	"HardwareSerial.h"
+
+1382858250 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lewei.ino
+	"lwtcpclientlite.h"
+	"conversion.h"
+
+1382858069 c:\users\ardypro\documents\lewei\lwserialwiflite\lwtcpclientlite.h
+	"HardwareSerial.h"
+	"lwgenericclient.h"
+	"conversion.h"
+
+1382857683 c:\users\ardypro\documents\lewei\lwserialwiflite\lwgenericclient.h
+	"ipost.h"
+	"debuglog.h"
+	"Arduino.h"
+
+1382857683 c:\users\ardypro\documents\lewei\lwserialwiflite\ipost.h
+
+1382857683 source:c:\users\ardypro\documents\lewei\lwserialwiflite\lwgenericclient.cpp
+	"lwgenericclient.h"
+	"conversion.h"
+

@@ -1,5 +1,5 @@
-#ifndef LWSERIALWIFILITE_H
-#define LWSERIALWIFILITE_H
+#ifndef lwTCPClientLite_H
+#define lwTCPClientLite_H
 
 #include "HardwareSerial.h"
 #include "lwgenericclient.h"
@@ -30,11 +30,11 @@
 */
 
 
-class lwSerialWifiLite : public lwGenericClient
+class lwTCPClientLite : public lwGenericClient
 {
 public:
     /** Default constructor */
-    lwSerialWifiLite(const char* userkey, const char* gateway) : lwGenericClient(userkey, gateway)
+    lwTCPClientLite(const char* userkey, const char* gateway) : lwGenericClient(userkey, gateway)
     {
         intervalUpdate = 50000;     //50s
         lastUpdate = millis();
@@ -61,4 +61,4 @@ private:
     void setLeadingChars();
 };
 
-#endif // LWSERIALWIFILITE_H
+#endif // lwTCPClientLite_H

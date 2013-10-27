@@ -1,5 +1,5 @@
 //#include <Arduino.h>
-#include "lwserialwifilite.h"
+#include "lwtcpclientlite.h"
 #include "conversion.h"
 //#include "string.h"
 
@@ -10,7 +10,7 @@ int t = 0;
 long l=0L;
 double d=0.00f;
 
-lwSerialWifiLite client(Userkey, Gateway);
+lwTCPClientLite client(Userkey, Gateway);
 
 void DELEAY()
 {
@@ -19,7 +19,7 @@ void DELEAY()
 
 void testAppend()
 {
-    lwSerialWifiLite client(Userkey, Gateway);
+    lwTCPClientLite client(Userkey, Gateway);
     client.update();
 
     delay(15000);
